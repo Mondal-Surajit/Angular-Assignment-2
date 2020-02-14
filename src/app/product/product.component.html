@@ -1,0 +1,44 @@
+
+<h1 style="color: brown">
+  <b>Demonstration of Built-in directives and data binding</b>
+</h1>
+
+
+
+<div class="hidden" [class.hidden]="hiddenProperty">
+<h4 style="color:#e60099">Recently Added Product: {{n}},{{q}}</h4>
+<hr>
+ </div>
+
+<div>
+
+<h2 style="color:#339966 ">Products List  - {{message}}</h2>
+
+<table border='1'>
+  <thead>
+    <tr style="color: mediumorchid"> 
+      <th>Product Name</th>
+      <th>Quantity</th>
+    </tr>
+  </thead>
+  <tbody style="color: blue">
+        <tr *ngFor="let p of products">
+          <td> {{p.name}}</td>
+          
+          <td> {{p.quantity}}</td>
+          
+				</tr>
+  </tbody>
+   
+</table>
+</div>
+<br><br><br>
+
+
+<div style="color: maroon">
+Enter product name : <input type="text" [(ngModel)]="name">
+Enter Quantity: <input type="text" [(ngModel)]="quantity" >
+
+<button (click)="onAddRow($event)" style="color:blue">Add Product</button>
+
+</div>
