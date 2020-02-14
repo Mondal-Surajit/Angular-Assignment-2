@@ -1,0 +1,16 @@
+p{
+  color: rgba(189, 8, 8, 0.664);
+  font-family: Lato;
+}
+thead{
+  color:purple;
+}
+td{
+  color: blue;
+}
+h2{
+  color:green;
+}
+button{
+  color:blue
+}

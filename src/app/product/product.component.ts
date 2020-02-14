@@ -1,39 +1,42 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, FormControl, FormArray, NgForm } from '@angular/forms'
+import { Component, Input , Output, EventEmitter } from '@angular/core';
 
-interface product{
+interface Products {
+  
   name:string;
   quantity:number;
 }
 
+
 @Component({
-  selector: 'app-product',
+  selector: 'app-products',
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css']
 })
-export class ProductComponent{
-name:string;
-quantity:number;
-products:product[]=[{"name":"Moto G5","quantity":2},{"name":"Racold Geyser","quantity":3}];
-n;
-q;
+export class ProductComponent  {
+     
+  @Input() childmsg: string;
+  @Output() msgEvent = new EventEmitter<any>();
    
-@Input() message: string ;  
+  value3: boolean=true;
+  prods:string;
+    qty:number;
 
-//isDisabled=false;
-hiddenProperty=true;
+    iproducts : Products[] = [{
+     
+    name:"Moto G5",
+    quantity:2
+  },
+  { 
+    name:"Racold Geyser",
+    quantity:3
+  }];
+  
+  AddItem(value1:string,value2:number,value3:boolean) {
+    this.iproducts.push({name:this.prods,quantity:this.qty})
+   
+    this.msgEvent.emit({value1,value2,value3})
 
 
- onAddRow() {
-   this.products.push({name:this.name,quantity:this.quantity});
-   this.n= this.name;
-   this.q=this.quantity;
-   //this.name=this.name.concat("1");
-
-   this.hiddenProperty=false;
- 
-}
-
-
-
+  }
+  
 }

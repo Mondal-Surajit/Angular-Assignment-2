@@ -1,1 +1,5 @@
-<app-product [message]="message"></app-product>
+<h1> Demonstration of passing data between components, styles demo </h1>
+<h2 *ngIf="clicked" > Recently Added Product : {{item}}, {{qty}}</h2>
+<hr>
+<app-products [childmsg]="parentmsg" (msgEvent)="receivemsg($event)" >
+  </app-products>
