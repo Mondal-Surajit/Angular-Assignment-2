@@ -12,7 +12,7 @@ export class AppComponent {
 
 
 
- message="Amazon" ;
+ message="Amazon" ; 
 
 }
 
