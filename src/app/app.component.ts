@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 
 
 export class AppComponent   {
-     parentmsg="Flipkart";
+     parentmsg="Amazon";
 
       item:string;
       qty:number;
