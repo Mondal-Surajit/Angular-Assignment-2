@@ -15,7 +15,7 @@ export class AppComponent   {
       item:string;
       qty:number;
       clicked:boolean;
-     receivemsg(obj)
+     receivemsg(obj) 
      {
        
        this.item =obj.value1;
